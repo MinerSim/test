@@ -1,28 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Webhook Tutorial</title>
-  </head>
-  <body>
-    <button onclick="sendMessage()">Send</button>
-  </body>
-
-  <script>
-    function sendMessage() {
-      const request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/1041406057475481661/oXQ0vttWprglHuB3ZeFNkkaZSUbE6AOuO-VbmQhYmibGEC2KaGWpwFxtl28iDJQV-HZA");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      const params = {
-        username: "My Webhook Name",
-        avatar_url: "",
-        content: "The message to send"
-      }
-
-      request.send(JSON.stringify(params));
-    }
-  </script>
+    <head>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" 
+              content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Here a loader is created which 
+             loads till response comes -->
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" 
+                 role="status" id="loading">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <h1>Registered Employees</h1>
+        <!-- table for showing data -->
+        <table id="employees"></table>
+    </body>
 </html>
