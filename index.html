@@ -8,19 +8,22 @@
   <body>
     <button onclick="sendMessage()">Send</button>
   </body>
-
   <script>
     function sendMessage() {
+	  var insertedata = prompt("Insert webhook")
+    var message = prompt("Type the message")
+    var username = prompt("Type the username of the bot")
       const request = new XMLHttpRequest();
-      const webhook = atob('aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA2MTAxNzg1ODExODc4NzA5Mi93YnJDcVhZWVZRaUhRNUxIcmtVSkc5azF3QkZzaVc1b3ZNSGNEd2VDa3F5cFkzcEJ3RW42TnBXVjZEazQtdm84Q2x4dA==')
+      const encode = btoa(insertedata)
+      const webhook = atob(encode)
       request.open("POST", webhook);
 
       request.setRequestHeader('Content-type', 'application/json');
 
       const params = {
-        username: "Test",
-        avatar_url: "",
-        content: "xd lol"
+        username: username,
+        avatar_url: "https://katoikidiazoa.gr/wp-content/uploads/2022/08/golden-retriever.jpg",
+        content: message
       }
 
       request.send(JSON.stringify(params));
